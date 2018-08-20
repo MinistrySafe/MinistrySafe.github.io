@@ -334,7 +334,7 @@ You must replace <code>myapitoken</code> with your actual API key.
 </span></code></pre>
 <p>Retrieves a list of users. Users will be returned up to 100 at a time. This endpoint supports paging. The default page is 1. To retrieve the next hundred users, change the <code>page</code> param to 2, 3, 4 etc.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET https://safetysystem.abusepreventionsystems.com/api/v1/users</code></p>
+<p><code>GET https://safetysystem.abusepreventionsystems.com/api/v2/users</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -368,7 +368,7 @@ You must replace <code>myapitoken</code> with your actual API key.
 </span></code></pre>
 <p>This endpoint retrieves a specific user.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET https://safetysystem.abusepreventionsystems.com/api/v1/users/&lt;ID&gt;</code></p>
+<p><code>GET https://safetysystem.abusepreventionsystems.com/api/v2/users/&lt;ID&gt;</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -381,7 +381,7 @@ You must replace <code>myapitoken</code> with your actual API key.
 <td>The ID of the user to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-user'>Create a User</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://safetysystem.abusepreventionsystems.com/api/v1/users/2"</span>
+<h2 id='create-a-user'>Create a User</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://safetysystem.abusepreventionsystems.com/api/v2/users/2"</span>
   -X POST
   -H <span class="s2">"Authorization: Token token=myapitoken"</span>
   -d <span class="s2">"user[first_name]=Tom&amp;user[last_name]=Harrington&amp;user[email]=test@example.com&amp;user[external_id]=1234&amp;tag_list=tag1,tag2,tag3"</span>
@@ -408,7 +408,7 @@ You must replace <code>myapitoken</code> with your actual API key.
 </span></code></pre>
 <p>This endpoint creates a new user.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>POST https://safetysystem.abusepreventionsystems.com/api/v1/users</code></p>
+<p><code>POST https://safetysystem.abusepreventionsystems.com/api/v2/users</code></p>
 <h3 id='user-attributes'>User Attributes</h3>
 <table><thead>
 <tr>
@@ -438,14 +438,14 @@ You must replace <code>myapitoken</code> with your actual API key.
 <td>You can optionally assign a user an ID for use in integration with your own system</td>
 </tr>
 </tbody></table>
-<h2 id='deactivate-a-user'>Deactivate a User</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://safetysystem.abusepreventionsystems.com/api/v1/users/2"</span>
+<h2 id='deactivate-a-user'>Deactivate a User</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://safetysystem.abusepreventionsystems.com/api/v2/users/2"</span>
   -X DELETE
   -H <span class="s2">"Authorization: Token token=myapitoken"</span>
 </code></pre><pre class="highlight json tab-json"><code><span class="w">  </span><span class="err">No</span><span class="w"> </span><span class="err">Content</span><span class="w"> </span><span class="err">Body</span><span class="w">
 </span></code></pre>
 <p>This endpoint deletes a specific user.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE https://safetysystem.abusepreventionsystems.com/api/v1/users/&lt;ID&gt;</code></p>
+<p><code>DELETE https://safetysystem.abusepreventionsystems.com/api/v2/users/&lt;ID&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
 <tr>
@@ -476,7 +476,7 @@ You must replace <code>myapitoken</code> with your actual API key.
 </span></code></pre>
 <p>Retrieves all trainings that have been assigned to a user.</p>
 <h3 id='http-request-5'>HTTP Request</h3>
-<p><code>GET https://safetysystem.abusepreventionsystems.com/api/v1/users/&lt;ID&gt;/trainings</code></p>
+<p><code>GET https://safetysystem.abusepreventionsystems.com/api/v2/users/&lt;ID&gt;/trainings</code></p>
 <h3 id='query-parameters-2'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -508,7 +508,7 @@ You must replace <code>myapitoken</code> with your actual API key.
 </span></code></pre>
 <p>Assigns the specified training to a user.</p>
 <h3 id='http-request-6'>HTTP Request</h3>
-<p><code>POST https://safetysystem.abusepreventionsystems.com/api/v1/users/&lt;ID&gt;/assign_training</code></p>
+<p><code>POST https://safetysystem.abusepreventionsystems.com/api/v2/users/&lt;ID&gt;/assign_training</code></p>
 <h3 id='query-parameters-3'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -569,7 +569,7 @@ You must replace <code>myapitoken</code> with your actual API key.
 </span></code></pre>
 <p>Resends the specified training to a user.</p>
 <h3 id='http-request-7'>HTTP Request</h3>
-<p><code>POST https://safetysystem.abusepreventionsystems.com/api/v1/users/&lt;ID&gt;/resend_training</code></p>
+<p><code>POST https://safetysystem.abusepreventionsystems.com/api/v2/users/&lt;ID&gt;/resend_training</code></p>
 <h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
