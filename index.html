@@ -346,7 +346,22 @@ You must replace <code>myapitoken</code> with your actual API key.
 <tr>
 <td>page</td>
 <td>1</td>
-<td>the page of users that will be returned</td>
+<td>The page of users that will be returned</td>
+</tr>
+<tr>
+<td>external_id</td>
+<td><blank></td>
+<td>Will filter the returned users by external_id</td>
+</tr>
+<tr>
+<td>search</td>
+<td><blank></td>
+<td>Will filter the returned users by a keyword search</td>
+</tr>
+<tr>
+<td>tag</td>
+<td><blank></td>
+<td>String. Only users having this tag will be returned</td>
 </tr>
 </tbody></table>
 <h2 id='get-a-user'>Get a User</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://safetysystem.abusepreventionsystems.com/api/v2/users/2"</span>
