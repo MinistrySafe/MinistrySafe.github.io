@@ -270,6 +270,14 @@
               </ul>
           </li>
           <li>
+            <a href="#webhooks" class="toc-h1 toc-link" data-title="webhooks">Webhooks</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#implementation" class="toc-h2 toc-link" data-title="implementation">Implementation</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
           </li>
       </div>
@@ -843,6 +851,21 @@ You must replace <code>myapitoken</code> with your actual API key.
 <p><em>** Required if not doing a quickapp (<code>quickapp</code>=<code>false</code>)</em></p>
 
 <p><em>*** Required for levels 2, 4, 5, 6, 7, and some custom packages</em></p>
+<h1 id='webhooks'>Webhooks</h1><h2 id='implementation'>Implementation</h2>
+<blockquote>
+<p>The webhook posts a JSON body structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"external_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"111"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"score"</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"complete_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2016-08-17T17:07:07.292Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"survey_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"standard"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"certificate_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://safetysystem.abusepreventionsystems.com/path/to/certificate"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>Webhooks are triggered upon successful completion of a training by a user, and can be configured in your developer console.</p>
+
+<p>If webhooks are enabled, when a trainee completes a quiz, we send a http POST request to the URLs you choose to specify.</p>
 <h1 id='errors'>Errors</h1>
 <p>The API uses the following error codes:</p>
 
