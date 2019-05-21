@@ -404,7 +404,7 @@ You must replace <code>myapitoken</code> with your actual API key.
 <td>The ID of the user to retrieve</td>
 </tr>
 </tbody></table>
-<h2 id='create-a-user'>Create a User</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://safetysystem.abusepreventionsystems.com/api/v2/users/2"</span>
+<h2 id='create-a-user'>Create a User</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://safetysystem.abusepreventionsystems.com/api/v2/users"</span>
   -X POST
   -H <span class="s2">"Authorization: Token token=myapitoken"</span>
   -d <span class="s2">"user[first_name]=Tom&amp;user[last_name]=Harrington&amp;user[email]=test@example.com&amp;user[external_id]=1234&amp;tag_list=tag1,tag2,tag3"</span>
@@ -757,8 +757,8 @@ You must replace <code>myapitoken</code> with your actual API key.
 <tr>
 <td>level</td>
 <td>No*</td>
+<td>integer</td>
 <td>The level of the background check being ordered</td>
-<td></td>
 </tr>
 <tr>
 <td>custom_background_check_package_code</td>
